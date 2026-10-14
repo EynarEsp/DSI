@@ -29,6 +29,7 @@ model User {
   telephone String?
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
+  role      String    @default("user")
   tenantId  Int
   tenant    Tenant    @relation(fields: [tenantId], references: [id])
 }
